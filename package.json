@@ -1,0 +1,48 @@
+{
+  "name": "vue3-piczoom",
+  "version": "1.0.6",
+  "main": "dist/vue3-piczoom.js",
+  "scripts": {
+    "dev": "webpack server",
+    "build": "webpack build",
+    "preview": "webpack preview",
+    "test:e2e": "nightwatch tests/e2e",
+    "test:unit": "nightwatch src/components/**/__tests__/*",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@nightwatch/vue": "0.4.5",
+    "@types/nightwatch": "^2.3.24",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "babel-loader": "^9.1.3",
+    "chromedriver": "^114.0.3",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "file-loader": "^6.2.0",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
+    "nightwatch": "^3.0.1",
+    "sass": "^1.64.2",
+    "style-loader": "^3.3.3",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^17.2.2",
+    "vue-template-compiler": "^2.7.14",
+    "wait-on": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/958264712/new-piczoom"
+  },
+  "homepage": "https://github.com/958264712/new-piczoom/blob/master/src/components/PicZoom",
+  "bugs": {
+    "url": "https://github.com/958264712/new-piczoom/issues"
+  }
+}
