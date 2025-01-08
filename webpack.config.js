@@ -6,8 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'vue3-piczoom.js',
-        library: 'vue3-piczoom',
+        filename: 'piczoom-optional.js',
+        library: 'piczoom-optional',
         libraryTarget: "umd"
     },
     plugins:[new VueLoaderPlugin()],

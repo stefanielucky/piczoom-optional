@@ -20,6 +20,14 @@ const props = defineProps({
   showEidt: {
     type: Boolean,
     default: false
+  },
+  offsetTop: {
+    type: Number,
+    default: 0
+  },
+  offsetLeft: {
+    type: Number,
+    default: 0
   }
 })
 const id = ref(null)
@@ -107,12 +115,12 @@ const initTime = () => {
   state.canvas = document.createElement('canvas')
   state.canvas.className = 'mouse-cover-canvas'
   state.canvas.style.position = 'absolute'
-  state.canvas.style.left = state.imgbox.offsetLeft + state.imgbox.offsetWidth + 10 + 'px'
-  state.canvas.style.top = state.imgbox.offsetTop + 'px'
-  state.canvas.style.border = '1px solid #eee'
+  state.canvas.style.left = state.imgbox.offsetLeft + state.imgbox.offsetWidth + props.offsetLeft + 10 + 'px'
+  state.canvas.style.top = state.imgbox.offsetTop + props.offsetTop + 'px'
+  // state.canvas.style.border = '1px solid #eee'
   state.canvas.style.zIndex = '99999'
-  state.canvas.height = state.imgbox.offsetHeight
-  state.canvas.width = state.imgbox.offsetWidth
+  state.canvas.height = state.imgbox.offsetHeight + 400
+  state.canvas.width = state.imgbox.offsetWidth + 400
   state.canvas.style.display = 'none'
   document.body.append(state.canvas)
   state.ctx = state.canvas.getContext("2d");
@@ -386,7 +394,7 @@ const rotateImg = (img, direction, step, isBig = false) => {
 
   .mouse-cover {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     cursor: move
   }
 

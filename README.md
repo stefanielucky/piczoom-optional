@@ -1,17 +1,17 @@
-vue3-piczoom
+piczoom-optional
 
 ```A picture magnifier component for Vue.js 3.x 基于vue3.x的电商图片放大镜插件```
 
 使用步骤
 ```安装 npm install```
-```npm i vue3-piczoom --save```
+```npm i piczoom-optional --save```
 
 ```使用use```
 ```js
 --script
 直接在你需要使用的vue文件中引用
 vue2中这样注册
-import PicZoom from 'vue3-piczoom'
+import PicZoom from 'piczoom-optional'
 export default {
   name: 'App',
   components: {
@@ -19,7 +19,7 @@ export default {
   }
 }
 vue3中这样即可使用
-import PicZoom from 'vue3-piczoom'
+import PicZoom from 'piczoom-optional'
 --html
 <pic-zoom :url="url" :scale="3"></pic-zoom>
 ```
